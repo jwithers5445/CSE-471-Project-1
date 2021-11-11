@@ -1,0 +1,58 @@
+Effect Component
+
+By: Jacob Withers
+
+	The effects component works by adding effects to the produced sound from the synthesizers
+There are 3 effects done in this project and they are; compression, a noise gate and chorus.
+
+	First the compression is done by setting a threshold and if the sound is above that threshold the sound
+is compressed to make it sound better. If the sound is below the threshold then nothing is done. This is done to
+make volume seem constant. To implement this the score file looks like this:
+
+<?xml version="1.0" encoding="utf-8"?>
+<score bpm="60" beatspermeasure="4">
+   <instrument instrument="ToneInstrument">
+      <compresssion/>
+      <note measure="1" beat="1" duration="1.9" note="C4"/>
+      <compressionoff/>
+
+	The second effect is the noise gate which reduces volume of sounds if they do not reach a certain threshold.
+This is used to remove hiss and other unwanted noises and is implemented in the score file like this:
+
+<?xml version="1.0" encoding="utf-8"?>
+<score bpm="60" beatspermeasure="4">
+   <instrument instrument="ToneInstrument">
+      <NoiseGate/>
+      <note measure="1" beat="1" duration="1.9" note="C4"/>
+      <NoiseGateOff/>
+
+	The third and final effect is the  chorus and is done with a short delay being added to the produced audio, it
+then reduces the sound of the delay to make it seem as if there is an echo. By adding multiple sounds together the chorus
+effect is produced and the score file is implemented like this:
+
+<?xml version="1.0" encoding="utf-8"?>
+<score bpm="60" beatspermeasure="4">
+   <instrument instrument="ToneInstrument">
+      <chorus/>
+      <note measure="1" beat="1" duration="1.9" note="C4"/>
+      <chorusoff/>
+
+10 - Component passes audio
+20 - 1 Effect
+30 - 3 Effects
+
+
+I had issues doing all effects one at a time so they are broken up intoo
+CompressionTest.score ChorusTest.score NoiseGateTest.score
+
+The resulting wav files were:
+CompressionTest.wav ChorusTest.wav NoiseGateTest.wav
+
+
+
+
+
+
+
+
+

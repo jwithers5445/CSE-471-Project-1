@@ -1,0 +1,23 @@
+Project Page
+
+By: Jacob Withers
+
+The components implemented in this project are:
+
+Additive Synthesizer
+Effects Component
+
+The score file I created was the first verse of Eye of the Tiger
+and is shown by the score file:
+tiger.score
+
+The additive synthesizer was not creating the sound needed for the
+song to sound correct so the tone instument synthesizer was used to 
+produce the wav file titled:
+tiger.wav
+
+10 - Suitable length audio files and web site turned in.
+20 - Audio file is recognizable as music in the opinion of the TA and Instructor.
+30 - Audio file utilizes all system components.
+40 - Audio file utilizes all capabilities of all system components.
+50 - The script has at least 240 notes in it.

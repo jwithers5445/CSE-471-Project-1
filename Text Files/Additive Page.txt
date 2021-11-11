@@ -1,0 +1,29 @@
+Additive Synthesizer
+
+By: Jacob Withers
+
+	The additive synthesizer is the first component in my project and does synthesizing 
+by adding multiple harmonics together to produce a different sound. To accomplish this
+I created a new class called "CAdditive" and depending on information given from the score file
+I would add sinewaves together to produce the new sound. I implemented all harmonics by
+using a loop until the frequency of the harmonic was over the Nyquist frequency. I also
+did envelope generation by using attack, decay, sustain, release in the class "CADSR". To add these 
+harmonics to the synthesizer the score file looked like this:
+
+<?xml version="1.0" encoding="utf-8"?>
+<score bpm="60" beatspermeasure="4">
+   <instrument instrument="Additive">
+      <note measure="1" beat="1" duration="1.9" note="C4" harmonics1 = "0.01" harmonics2 = "0.02"/>
+
+10 - Sinusoid playback on demand from the sequencer
+20 - Definition of all harmonics
+30 - Envelope generation
+
+I was having issues producing the sound I wanted and but believe my code is very close to 
+working. 
+
+The score I used for this was:
+AdditiveTest.score 
+
+The resulting wav file was:
+AdditiveTest.wav
